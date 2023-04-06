@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <nav style="height:60px">
+        <div style="float:left ">
+            Hello thereUser!!
+        </div>
+        <div style="float:right ">
+            <a href=" {{url_for( 'logout')}} ">Press here to logout</a>
+        </div>
+    </nav>
+
+    <div class=" left ">
+        <h3>Your Subscription</h3>
+        <table style="width:100% ">
+            <th></th>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Year</th>
+            <th></th>
+
+            <tr>
+                <td>
+                    <img src="https://raw.githubusercontent.com/davidpots/songnotes_cms/master/public/images/artists/JohnLennon.jpg
+                            " height="20 " width="20 " />
+                </td>
+                <td>Title 1</td>
+                <td> Artist 1</td>
+                <td>Year 1</td>
+                <td> Unsubscribe</td>
+            </tr>
+
+
+
+        </table>
+    </div>
+    <div class="right ">
+        <div style="width:100%">
+            {{form.title}} {{form.year}} {{form.artist}} {{form.query}}
+        </div>
+        <div style="width:100%">
+            <table style="width:100% ">
+                <th></th>
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Year</th>
+                <th></th>
+
+                <tr>
+                    <td>
+                        <img src="https://raw.githubusercontent.com/davidpots/songnotes_cms/master/public/images/artists/JohnLennon.jpg " height="20 " width="20 " />
+                    </td>
+                    <td>Title 1</td>
+                    <td> Artist 1</td>
+                    <td>Year 1</td>
+                    <td> Subscribe</td>
+                </tr>
+
+
+
+            </table>
+        </div>
+    </div>
+
+
+</body>
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .left {
+        width: 50vw;
+        height: 100%;
+        float: left;
+    }
+    
+    .right {
+        width: 50vw;
+        height: 100%;
+        float: right;
+    }
+</style>
+
+</html>
